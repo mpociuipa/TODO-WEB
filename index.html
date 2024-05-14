@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TODO App</title>
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"/>">
+</head>
+<body>
+    <div class="app">
+        <h1 class="app__title">TODO List</h1>
+        <div class="app__new-task new-task">
+            <input type="text" class="new-task__input" id="task-title" placeholder="Enter task title">
+            <select class="new-task__select" id="task-priority">
+                <option value="" disabled selected>Select priority</option>
+                <option value="Low">Low</option>
+                <option value="Medium">Medium</option>
+                <option value="High">High</option>
+            </select>
+            <input type="date" class="new-task__date" id="task-date">
+            <button class="new-task__button" id="add-task">Add Task</button>
+        </div>
+        <table class="app__task-table task-table" id="task-table">
+            <thead>
+                <tr>
+                    <th><i class="fas fa-tasks"></i></th>
+                    <th>Subject</th>
+                    <th>Priority</th>
+                    <th>Due Date</th>
+                    <th>Status</th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+            </tbody>
+        </table>
+    </div>
+    <script src="app.js"></script>
+</body>
+</html>
+

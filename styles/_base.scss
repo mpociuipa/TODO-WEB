@@ -1,0 +1,14 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    background-color: $background-color;
+    color: $font-color;
+}
+
+h1, input, select, button {
+    font-family: inherit;
+}
+
+button {
+    cursor: pointer;
+}

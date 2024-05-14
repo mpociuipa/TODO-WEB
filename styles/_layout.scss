@@ -1,0 +1,39 @@
+.app {
+    @include flex-center;
+    flex-direction: column;
+    height: 100vh;
+    padding: 20px;
+    text-align: center;
+
+    &__title {
+        margin-bottom: 20px;
+    }
+
+    &__new-task {
+        @include flex-center;
+        flex-direction: column;
+        gap: 10px;
+        margin-bottom: 20px;
+        width: 100%;
+        max-width: 400px;
+    }
+
+    &__task-table {
+        width: 100%;
+        max-width: 800px;
+        border-collapse: collapse;
+
+        th, td {
+            padding: 10px;
+            border: 1px solid #ddd;
+        }
+
+        th {
+            background-color: #f4f4f4;
+        }
+
+        td {
+            text-align: center;
+        }
+    }
+}

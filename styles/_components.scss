@@ -1,0 +1,142 @@
+.new-task {
+    &__input {
+        width: 100%;
+        padding: 10px;
+        border: 1px solid #ddd;
+        border-radius: $border-radius;
+        margin: 5px 0;
+    }
+
+    &__select,
+    &__date,
+    &__button {
+        width: 100%;
+        padding: 10px;
+        border: 1px solid #ddd;
+        border-radius: $border-radius;
+        margin: 5px 0;
+    }
+
+    &__button {
+        background-color: $primary-color;
+        color: #fff;
+        border: none;
+
+        &:hover {
+            background-color: darken($primary-color, 10%);
+        }
+    }
+}
+
+.task-table {
+    .task-item {
+        &.completed {
+            text-decoration: none;
+            color: #888;
+        }
+
+        .task-item__checkbox:checked + .task-item__subject {
+            text-decoration: line-through;
+        }
+
+        .task-item__priority {
+            text-align: center;
+            color: white;
+        }
+
+        .task-item__button {
+            background-color: $secondary-color;
+            border: none;
+            padding: 5px;
+            cursor: pointer;
+            border-radius: $border-radius;
+
+            &:hover {
+                background-color: darken($secondary-color, 10%);
+            }
+        }
+
+        .task-item__checkbox {
+            cursor: pointer;
+        }
+    }
+}
+
+
+.task-item__priority {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+}
+
+.task-item__priority .priority-text {
+    padding: 13px;
+    border-radius: 18px;
+}
+
+.task-item__priority.priority-high .priority-text {
+    background-color: red;
+    color: white;
+}
+
+.task-item__priority.priority-medium .priority-text {
+    background-color: blue;
+    color: white;
+}
+
+.task-item__priority.priority-low .priority-text {
+    background-color: lightgreen;
+    color: white;
+}
+.task-item__icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 30px; // Pakeiskite pagal poreikį
+    height: 30px; // Pakeiskite pagal poreikį
+    border-radius: 50%; // Padarys ikoną apvalią
+    background-color: green; // Spalva, kurią norite pritaikyti
+    margin-right: 10px; // Pakeiskite pagal poreikį
+}
+
+.task-item__icon .fas {
+    color: white; // Spalva, kurią norite pritaikyti ikonai
+    font-size: 16px; // Dydis, kurią norite pritaikyti ikonai
+}
+.task-table th {
+    background-color: lightgrey; // Fono spalva pavadinimų eilutėje
+    padding: 10px; // Padingas aplink pavadinimus
+}
+
+
+/* Custom checkbox styles */
+.task-item__checkbox {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    width: 26px;
+    height: 26px;
+    border: 2px solid #ccc;
+    border-radius: 3px;
+    outline: none;
+    cursor: pointer;
+    position: relative;
+}
+
+.task-item__checkbox:checked {
+    background-color: rgb(238, 241, 238);
+    border-color: rgb(179, 180, 179);
+}
+
+.task-item__checkbox:checked::before {
+    content: "";
+    display: block;
+    width: 16px;
+    height: 20px;
+    border: solid rgb(12, 111, 17);
+    border-width: 0 2px 2px 0;
+    transform: rotate(45deg);
+    position: absolute;
+    left: 2px;
+}
